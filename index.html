@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEEM SHAWARMA — Unwrap The Taste | 3D Culinary Experience</title>
+    <meta
+      name="description"
+      content="Experience Meem Shawarma: Unwrap the taste. Flame-shaved Chicken Shawarma, Shatter-Crisp Chicken, Chicken Popcorn, Steamed Chicken Bao, Crispy Chicken Burgers & Molten Chicken Cheese Bowls."
+    />
+    <meta name="theme-color" content="#0b0908" />
+
+    <!-- Open Graph / Social SEO (Section 55) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MEEM SHAWARMA — Unwrap The Taste" />
+    <meta
+      property="og:description"
+      content="Fresh chicken. Bold flavours. Crispy textures. Wrapped, stacked and served hot."
+    />
+    <meta property="og:image" content="./assets/images/shawarma-wrapped.jpg" />
+
+    <!-- Editorial Display & Geometric Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./src/styles/main.css" />
+
+    <!-- Structured Data (Restaurant JSON-LD — Section 55) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Meem Shawarma",
+        "slogan": "Unwrap The Taste",
+        "servesCuisine": ["Middle Eastern", "Shawarma", "Crispy Chicken", "Fast Casual"],
+        "priceRange": "$$",
+        "description": "Modern chicken-based fast food featuring flame-roasted Chicken Shawarma, Chicken Popcorn, Chicken Bao, Crispy Chicken, Crispy Chicken Burger, and Chicken Cheese Bowl."
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <div id="root"></div>
+
+    <!-- Local High-Speed Vendor Runtime Bundles -->
+    <script src="./vendor/react.production.min.js"></script>
+    <script src="./vendor/react-dom.production.min.js"></script>
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/ScrollTrigger.min.js"></script>
+    <script src="./vendor/lenis.min.js"></script>
+
+    <!-- Main Modular ES6 + Three.js WebGL Application -->
+    <script type="module" src="./src/App.js"></script>
+  </body>
+</html>

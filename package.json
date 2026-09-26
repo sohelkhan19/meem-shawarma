@@ -1,0 +1,11 @@
+{
+  "name": "meem-shawarma-3d-experience",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Awwwards-style 3D WebGL & GSAP interactive culinary website for Meem Shawarma — Unwrap The Taste",
+  "scripts": {
+    "start": "C:\\xampp\\php\\php.exe -S localhost:8080",
+    "dev": "npx vite --port 8080"
+  }
+}
