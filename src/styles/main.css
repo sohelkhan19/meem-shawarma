@@ -280,6 +280,10 @@ body {
   white-space: nowrap;
 }
 
+.mobile-logo-break {
+  display: none;
+}
+
 .brand-sub {
   font-size: 0.6rem;
   letter-spacing: 0.22em;
@@ -821,7 +825,7 @@ body {
 .hero-word-shawarma {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(3.4rem, 10.5vw, 10.4rem);
+  font-size: clamp(2rem, 8.2vw, 8.2rem);
   line-height: 0.86;
   letter-spacing: -0.04em;
   color: transparent;
@@ -3020,40 +3024,46 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* 1. Mobile Navbar — Logo + MENU + SFX + ORDER NOW all fit inside 100vw */
+  /* 1. Mobile Navbar — Stacked MEEM / SHAWARMA Logo + MENU + SFX + ORDER NOW all fit inside 100vw */
   .main-navbar {
-    padding: 0.65rem 0;
+    padding: 0.55rem 0;
   }
 
   .navbar-inner {
     width: 100%;
-    padding: 0 0.75rem;
-    gap: 0.35rem;
+    max-width: 100vw;
+    padding: 0 0.65rem;
+    gap: 0.3rem;
   }
 
   .brand-logo {
-    gap: 0.45rem;
+    gap: 0.4rem;
   }
 
   .brand-emblem {
-    width: 30px;
-    height: 30px;
-    font-size: 1rem;
-    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+    border-radius: 7px;
   }
 
   .brand-title {
-    font-size: 0.72rem;
+    font-size: 0.66rem;
+    line-height: 1.06;
     letter-spacing: 0.04em;
+    white-space: normal;
+  }
+
+  .mobile-logo-break {
+    display: inline;
   }
 
   .brand-sub {
-    font-size: 0.46rem;
-    letter-spacing: 0.12em;
+    display: none;
   }
 
   .navbar-links {
-    gap: 0.35rem;
+    gap: 0.25rem;
   }
 
   .navbar-links .nav-link {
@@ -3061,20 +3071,21 @@ body {
   }
 
   .nav-link-btn {
-    font-size: 0.66rem;
-    letter-spacing: 0.08em;
-    padding: 0.38rem 0.62rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    padding: 0.34rem 0.55rem;
     background: rgba(255, 246, 235, 0.07);
     border: 1px solid var(--border-subtle);
     border-radius: 999px;
+    gap: 0.3rem;
   }
 
   .navbar-actions {
-    gap: 0.35rem;
+    gap: 0.3rem;
   }
 
   .sound-toggle-btn {
-    padding: 0.4rem 0.52rem;
+    padding: 0.36rem 0.48rem;
   }
 
   .sound-label {
@@ -3082,10 +3093,15 @@ body {
   }
 
   .order-cta-btn {
-    padding: 0.44rem 0.72rem;
-    font-size: 0.64rem;
-    letter-spacing: 0.06em;
-    gap: 0.3rem;
+    padding: 0.4rem 0.64rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    gap: 0.25rem;
+  }
+
+  .cart-badge {
+    font-size: 0.6rem;
+    padding: 0.08rem 0.36rem;
   }
 
   .menu-overlay-grid {
@@ -3095,12 +3111,12 @@ body {
 
   /* 2. Hero Section */
   .hero-word-meem {
-    font-size: 18vw;
+    font-size: 16vw;
     transform: translateY(-22vh);
   }
 
   .hero-word-shawarma {
-    font-size: 13.5vw;
+    font-size: 10vw;
     transform: translateY(18vh);
   }
 

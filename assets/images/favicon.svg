@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Dark Charcoal Rounded Badge Background -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#2a160c" />
+      <stop offset="65%" stop-color="#110c09" />
+      <stop offset="100%" stop-color="#080605" />
+    </radialGradient>
+
+    <!-- Warm Amber Rim Glow -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb703" />
+      <stop offset="50%" stop-color="#ff4d1c" />
+      <stop offset="100%" stop-color="#b8862d" />
+    </linearGradient>
+
+    <!-- Toasted Saj / Lavash Flatbread Gradient -->
+    <linearGradient id="breadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3d5a4" />
+      <stop offset="55%" stop-color="#dfb06c" />
+      <stop offset="100%" stop-color="#b97d36" />
+    </linearGradient>
+
+    <!-- Matte Black & Gold Branded Foil Wrapper -->
+    <linearGradient id="foilBlack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#241e1b" />
+      <stop offset="50%" stop-color="#120f0d" />
+      <stop offset="100%" stop-color="#090706" />
+    </linearGradient>
+
+    <!-- Metallic Gold Foil Collar & Trim -->
+    <linearGradient id="metallicGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8862d" />
+      <stop offset="35%" stop-color="#ffe299" />
+      <stop offset="65%" stop-color="#d49b38" />
+      <stop offset="100%" stop-color="#fff0c2" />
+    </linearGradient>
+
+    <!-- Char-Grilled Spiced Chicken Gradient -->
+    <linearGradient id="chickenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f77f00" />
+      <stop offset="60%" stop-color="#c84b0f" />
+      <stop offset="100%" stop-color="#6e2206" />
+    </linearGradient>
+
+    <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Rounded Luxury Badge Base -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bgGlow)" stroke="url(#goldBorder)" stroke-width="3" />
+
+  <!-- Floating Spice & Crumb Particles -->
+  <circle cx="28" cy="34" r="2.2" fill="#ffb703" opacity="0.85" />
+  <circle cx="102" cy="84" r="2" fill="#ff4d1c" opacity="0.85" />
+  <circle cx="96" cy="96" r="1.4" fill="#ffe299" opacity="0.7" />
+  <circle cx="24" cy="52" r="1.5" fill="#ff4d1c" opacity="0.7" />
+
+  <!-- 3D SHAWARMA GROUP (Tilted at ~126° / -36° diagonal angle like the 3D Hero Model) -->
+  <g transform="translate(64, 65) rotate(34)" filter="url(#dropShadow)">
+    <!-- 1. Overflowing Crown Ingredients (Top of Shawarma) -->
+    <!-- Crisp Romaine Lettuce Frills -->
+    <circle cx="-13" cy="-37" r="9" fill="#55a630" />
+    <circle cx="12" cy="-36" r="9" fill="#6ac438" />
+    <circle cx="0" cy="-42" r="8.5" fill="#7ae582" />
+
+    <!-- Pickled Pink Turnip Batons -->
+    <rect x="-15" y="-47" width="5.5" height="14" rx="2.5" transform="rotate(-18 -12 -40)" fill="#e82574" />
+    <rect x="9" y="-46" width="5.5" height="14" rx="2.5" transform="rotate(20 12 -40)" fill="#ff4d8d" />
+
+    <!-- Char-Grilled Rotisserie Chicken Strips -->
+    <rect x="-10" y="-49" width="10" height="22" rx="5" transform="rotate(-8 -5 -38)" fill="url(#chickenGrad)" />
+    <rect x="1" y="-51" width="10.5" height="24" rx="5" transform="rotate(9 6 -39)" fill="url(#chickenGrad)" />
+    <rect x="-5" y="-45" width="11" height="20" rx="5" fill="#e05a14" />
+    <!-- Dark Char Marks on Chicken -->
+    <ellipse cx="-4" cy="-43" rx="3" ry="1.5" fill="#2b0e04" />
+    <ellipse cx="5" cy="-41" rx="3.2" ry="1.5" fill="#2b0e04" />
+    <ellipse cx="0" cy="-36" rx="3.5" ry="1.4" fill="#2b0e04" />
+
+    <!-- Whipped Garlic Toum & Fiery Red Shatta Sauce Drizzle -->
+    <path
+      d="M -14 -31 Q -7 -24 0 -30 T 14 -29 Q 11 -21 4 -24 Q -2 -18 -9 -25 Z"
+      fill="#fff8e8"
+    />
+    <path
+      d="M -8 -32 Q 0 -26 8 -31"
+      fill="none"
+      stroke="#e63946"
+      stroke-width="3.2"
+      stroke-linecap="round"
+    />
+
+    <!-- 2. Toasted Artisan Flatbread Body -->
+    <path
+      d="M -20 -30 C -12 -24 12 -24 20 -30 L 16 26 C 16 34 -16 34 -16 26 Z"
+      fill="url(#breadGrad)"
+    />
+    <!-- Flatbread Diagonal Seam & Panini Char Marks -->
+    <path d="M -14 -18 L 12 -25" stroke="#522308" stroke-width="2.6" stroke-linecap="round" opacity="0.75" />
+    <path d="M -16 -6 L 15 -14" stroke="#522308" stroke-width="2.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="-7" cy="-13" r="2.2" fill="#421b05" opacity="0.65" />
+    <circle cx="8" cy="-20" r="1.8" fill="#421b05" opacity="0.65" />
+
+    <!-- 3. Peeling Gold Foil Collar Petals (Unwrapping Mid-Section) -->
+    <path
+      d="M -20 -4 L -26 -14 L -12 -7 L 0 -15 L 12 -7 L 26 -14 L 19 -3 Z"
+      fill="url(#metallicGold)"
+    />
+
+    <!-- 4. Branded Matte Black & Gold Foil Lower Wrapper -->
+    <path
+      d="M -19 -4 C -8 2 8 2 19 -4 L 14 35 C 12 44 -12 44 -14 35 Z"
+      fill="url(#foilBlack)"
+      stroke="url(#metallicGold)"
+      stroke-width="1.8"
+    />
+    <!-- Gold Foil Luxury Diagonal Stripes on Wrapper -->
+    <path d="M -16 8 L 16 -1" stroke="url(#metallicGold)" stroke-width="2" opacity="0.85" />
+    <path d="M -15 20 L 15 11" stroke="url(#metallicGold)" stroke-width="2" opacity="0.85" />
+    <path d="M -12 31 L 13 23" stroke="url(#metallicGold)" stroke-width="1.6" opacity="0.7" />
+  </g>
+</svg>

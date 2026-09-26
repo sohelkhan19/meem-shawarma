@@ -64,7 +64,10 @@ export function Navbar({ onOpenOrder, cartCount, onSelectMenuProduct }) {
         >
           <span className="brand-emblem" aria-hidden="true">M</span>
           <span className="brand-text-wrap">
-            <span className="brand-title">MEEM SHAWARMA</span>
+            <span className="brand-title">
+              MEEM <br className="mobile-logo-break" />
+              SHAWARMA
+            </span>
             <span className="brand-sub">UNWRAP THE TASTE</span>
           </span>
         </a>
