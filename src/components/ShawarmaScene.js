@@ -16,6 +16,8 @@ export const sceneBridge = {
   brandSectionProgress: 0,// 0 -> 1 during Section 2 (Brand Intro)
   visibilityAlpha: 1,     // Fades out during mid-sections, returns at Final CTA
   ctaReturnProgress: 0,   // 0 -> 1 at Final CTA ("READY FOR ANOTHER BITE?")
+  finaleUnwrapOverride: null, // Optional manual unwrap control in Finale Stage
+  triggerSpin: null,      // Interactive 360 spin impulse
   mouseX: 0,
   mouseY: 0,
   webglSupported: true,
@@ -141,6 +143,10 @@ export function initShawarmaWebGL(canvasContainer, onReady) {
   };
   window.addEventListener("resize", onResize);
 
+  sceneBridge.triggerSpin = (deg = 360) => {
+    shawarma.addDragDelta((deg / 360) * 520, 0);
+  };
+
   // Intro fly-in state
   shawarma.rootRig.scale.setScalar(0.75);
   const clock = new THREE.Clock();
@@ -153,7 +159,9 @@ export function initShawarmaWebGL(canvasContainer, onReady) {
     const intro = sceneBridge.introProgress;
     const unwrap =
       sceneBridge.ctaReturnProgress > 0.05
-        ? 1.0
+        ? sceneBridge.finaleUnwrapOverride !== null
+          ? sceneBridge.finaleUnwrapOverride
+          : 1.0
         : sceneBridge.unwrapProgress;
 
     cameraCtrl.state.introProgress = intro;
@@ -161,7 +169,8 @@ export function initShawarmaWebGL(canvasContainer, onReady) {
     cameraCtrl.update(sceneBridge.mouseX, sceneBridge.mouseY, reducedMotion);
 
     // Scale Shawarma cleanly with intro & mobile responsiveness
-    const baseScale = (window.innerWidth < 768 ? 0.76 : 0.96) * (0.72 + intro * 0.28);
+    const isMob = window.innerWidth < 768;
+    const baseScale = (isMob ? 0.68 : 0.96) * (0.72 + intro * 0.28);
     const vis = Math.max(sceneBridge.visibilityAlpha, sceneBridge.ctaReturnProgress);
     shawarma.rootRig.scale.setScalar(baseScale * Math.max(vis, 0.001));
     shawarma.rootRig.visible = vis > 0.02;
