@@ -123,8 +123,6 @@ export function initHeroScrollUnwrap(onPhaseChange) {
   const heroStage = document.querySelector("#hero-pin-stage");
   if (!heroStage) return;
 
-  const isMobile = window.innerWidth < 768;
-
   // Main Pinned 4-Phase Hero Unwrap Timeline
   const heroTl = gsap.timeline({
     scrollTrigger: {
@@ -163,9 +161,9 @@ export function initHeroScrollUnwrap(onPhaseChange) {
     .to(
       ".hero-word-meem",
       {
-        xPercent: isMobile ? -4 : -14,
-        yPercent: -6,
-        scale: isMobile ? 1.0 : 1.06,
+        xPercent: -14,
+        yPercent: -8,
+        scale: 1.06,
         duration: 0.5,
         ease: "none"
       },
@@ -174,9 +172,9 @@ export function initHeroScrollUnwrap(onPhaseChange) {
     .to(
       ".hero-word-shawarma",
       {
-        xPercent: isMobile ? 4 : 16,
-        yPercent: 6,
-        scale: isMobile ? 1.0 : 1.08,
+        xPercent: 16,
+        yPercent: 10,
+        scale: 1.08,
         duration: 0.5,
         ease: "none"
       },
@@ -186,8 +184,8 @@ export function initHeroScrollUnwrap(onPhaseChange) {
     .to(
       ".hero-word-meem",
       {
-        xPercent: isMobile ? -10 : -34,
-        opacity: isMobile ? 0.12 : 0.22,
+        xPercent: -34,
+        opacity: 0.22,
         duration: 0.5,
         ease: "power1.inOut"
       },
@@ -196,8 +194,8 @@ export function initHeroScrollUnwrap(onPhaseChange) {
     .to(
       ".hero-word-shawarma",
       {
-        xPercent: isMobile ? 10 : 38,
-        opacity: isMobile ? 0.12 : 0.18,
+        xPercent: 38,
+        opacity: 0.18,
         duration: 0.5,
         ease: "power1.inOut"
       },
@@ -207,14 +205,12 @@ export function initHeroScrollUnwrap(onPhaseChange) {
     .fromTo(
       ".hero-phase4-headline",
       {
-        x: isMobile ? 0 : -90,
-        y: isMobile ? 24 : 0,
+        x: -90,
         opacity: 0,
-        scale: 0.96
+        scale: 0.94
       },
       {
         x: 0,
-        y: 0,
         opacity: 1,
         scale: 1,
         duration: 0.28,

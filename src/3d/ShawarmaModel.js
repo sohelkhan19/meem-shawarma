@@ -608,22 +608,20 @@ export function createShawarmaModel(textures) {
     anglePivot.rotation.z += (targetZ - anglePivot.rotation.z) * 0.07;
     anglePivot.rotation.x += (targetX - anglePivot.rotation.x) * 0.07;
 
-    // Phase 4 (0.70 -> 0.98): Move unwrapped shawarma toward the right side of screen on desktop
+    // Phase 4 (0.72 -> 1.0): Move unwrapped shawarma toward the right side of screen
     const sideShiftT = THREE.MathUtils.smoothstep(p, 0.70, 0.98);
-    const baseRightX = isMobile ? 0.0 : 1.65;
+    const baseRightX = isMobile ? 0.35 : 1.75;
 
-    // When scrolling into the Final CTA / Finale Stage (ctaReturnProgress -> 1),
-    // bring the unwrapped 3D Shawarma back to center (x = 0, y = 0.08) so it is 100% visible!
+    // If user scrolls down to Final CTA (ctaReturnProgress > 0), bring Shawarma back!
     const targetPosX =
       sideShiftT * baseRightX * (1 - ctaReturnProgress) +
-      mouseX * (isMobile ? 0.08 : 0.18);
+      mouseX * 0.18;
     const floatY =
-      Math.sin(elapsedTime * 1.35) * 0.08 +
-      ctaReturnProgress * 0.08 -
-      mouseY * (isMobile ? 0.06 : 0.14);
+      Math.sin(elapsedTime * 1.35) * 0.09 -
+      mouseY * 0.14;
 
-    rootRig.position.x += (targetPosX - rootRig.position.x) * 0.08;
-    rootRig.position.y += (floatY - rootRig.position.y) * 0.08;
+    rootRig.position.x += (targetPosX - rootRig.position.x) * 0.07;
+    rootRig.position.y += (floatY - rootRig.position.y) * 0.07;
   }
 
   function addDragDelta(dx, dy) {

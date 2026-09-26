@@ -697,9 +697,8 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  max-width: 100vw;
   height: 100vh;
-  min-height: 640px;
+  min-height: 680px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -721,8 +720,8 @@ body {
 
 .intro-center-glow {
   position: absolute;
-  width: 320px;
-  height: 320px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -793,8 +792,6 @@ body {
   align-items: center;
   pointer-events: none;
   padding: 0 4vw;
-  max-width: 100vw;
-  overflow: hidden;
 }
 
 /* Behind 3D WebGL Canvas (z-index: 1 < canvas z-index: 3) */
@@ -810,32 +807,28 @@ body {
 }
 
 .hero-word-meem {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(3.2rem, 13.2vw, 13.2rem);
+  font-size: clamp(4.2rem, 13.5vw, 13.5rem);
   line-height: 0.86;
   letter-spacing: -0.04em;
   color: rgba(255, 246, 235, 0.92);
   transform: translateY(-10vh);
   text-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+  white-space: nowrap;
 }
 
 .hero-word-shawarma {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(2.2rem, 10.2vw, 10.2rem);
+  font-size: clamp(3.4rem, 10.5vw, 10.4rem);
   line-height: 0.86;
   letter-spacing: -0.04em;
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 246, 235, 0.9);
   transform: translateY(11vh);
   filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.75));
+  white-space: nowrap;
 }
 
 .char-mask {
@@ -852,30 +845,30 @@ body {
 /* Phase 4 Reveal Headline on Left when Shawarma moves Right */
 .hero-phase4-headline {
   position: absolute;
-  left: 4vw;
+  left: 5vw;
   top: 50%;
   transform: translateY(-50%);
-  max-width: min(540px, 92vw);
+  max-width: 540px;
   z-index: 8;
   opacity: 0;
   pointer-events: auto;
 }
 
 .phase4-eyebrow {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   color: var(--gold-yellow);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
 }
 
 .phase4-title {
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 5.6vw, 5.2rem);
+  font-size: clamp(2.8rem, 5.8vw, 5.2rem);
   font-weight: 900;
   line-height: 0.94;
   letter-spacing: -0.03em;
-  margin-bottom: 0.95rem;
+  margin-bottom: 1.1rem;
 }
 
 .phase4-title span {
@@ -884,33 +877,33 @@ body {
 
 .phase4-copy {
   color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.55;
-  margin-bottom: 1.35rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
 }
 
 /* Live 4-Phase Unwrap Telemetry HUD */
 .hero-phase-hud {
   position: absolute;
   left: 4vw;
-  bottom: 2.2rem;
-  width: min(330px, 82vw);
-  background: rgba(16, 12, 9, 0.8);
+  bottom: 2.4rem;
+  width: min(330px, 84vw);
+  background: rgba(16, 12, 9, 0.76);
   backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: 18px;
-  padding: 0.95rem 1.15rem;
+  padding: 1rem 1.2rem;
   z-index: 9;
 }
 
 .hud-header {
   display: flex;
   justify-content: space-between;
-  font-size: 0.66rem;
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   color: var(--gold-yellow);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 
 .hud-progress-track {
@@ -919,7 +912,7 @@ body {
   background: rgba(255, 246, 235, 0.12);
   border-radius: 999px;
   overflow: hidden;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.65rem;
 }
 
 .hud-progress-fill {
@@ -932,21 +925,21 @@ body {
 .hud-phase-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   letter-spacing: 0.04em;
-  margin-bottom: 0.18rem;
+  margin-bottom: 0.2rem;
 }
 
 .hud-phase-detail {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
-  line-height: 1.38;
+  line-height: 1.4;
 }
 
 .hud-phase-dots {
   display: flex;
   gap: 0.4rem;
-  margin-top: 0.55rem;
+  margin-top: 0.65rem;
 }
 
 .phase-dot {
@@ -964,7 +957,7 @@ body {
 /* Bottom Interactive Hint & Scroll Unwrap Indicator (Section 12) */
 .hero-bottom-bar {
   position: absolute;
-  bottom: 2.2rem;
+  bottom: 2.3rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
@@ -979,11 +972,10 @@ body {
   border-radius: 999px;
   background: rgba(15, 11, 9, 0.72);
   border: 1px solid var(--border-subtle);
-  font-size: 0.65rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
-  white-space: nowrap;
 }
 
 .pulse-dot {
@@ -992,7 +984,6 @@ body {
   border-radius: 50%;
   background: var(--fire-orange);
   box-shadow: 0 0 12px var(--fire-orange);
-  flex-shrink: 0;
   animation: pulseGlow 1.8s infinite ease-in-out;
 }
 
@@ -1009,20 +1000,20 @@ body {
 
 .scroll-unwrap-indicator {
   position: absolute;
-  right: 3.5vw;
-  bottom: 2.1rem;
+  right: 4vw;
+  bottom: 2.2rem;
   z-index: 9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.38rem;
   pointer-events: none;
 }
 
 .scroll-word {
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   color: var(--text-muted);
 }
 
@@ -1032,7 +1023,7 @@ body {
 
 .scroll-line-track {
   width: 2px;
-  height: 50px;
+  height: 54px;
   background: rgba(255, 246, 235, 0.14);
   border-radius: 99px;
   position: relative;
@@ -1054,12 +1045,12 @@ body {
     top: -22px;
   }
   100% {
-    top: 52px;
+    top: 56px;
   }
 }
 
 .scroll-arrow-glyph {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--fire-orange);
   animation: arrowBounce 1.65s infinite ease-in-out;
 }
@@ -3102,57 +3093,22 @@ body {
     gap: 1.5rem;
   }
 
-  /* 2. Hero Section — Single-line MEEM & SHAWARMA + clean HUD layout */
-  .hero-typography-layer {
-    padding: 0 3.5vw;
-  }
-
+  /* 2. Hero Section */
   .hero-word-meem {
-    font-size: clamp(2.6rem, 16.5vw, 4.8rem);
-    transform: translateY(-20vh);
-    white-space: nowrap;
+    font-size: 18vw;
+    transform: translateY(-22vh);
   }
 
   .hero-word-shawarma {
-    font-size: clamp(1.85rem, 11vw, 3.5rem);
-    transform: translateY(14vh);
-    -webkit-text-stroke: 1.4px rgba(255, 246, 235, 0.9);
-    white-space: nowrap;
+    font-size: 13.5vw;
+    transform: translateY(18vh);
   }
 
   .hero-phase4-headline {
-    top: 14%;
-    left: 4vw;
-    right: 4vw;
-    max-width: 92vw;
+    top: 22%;
+    left: 5vw;
+    right: 5vw;
     transform: none;
-    background: rgba(11, 9, 8, 0.72);
-    backdrop-filter: blur(10px);
-    padding: 1rem 1.15rem;
-    border-radius: 18px;
-    border: 1px solid var(--border-subtle);
-  }
-
-  .phase4-title {
-    font-size: clamp(1.75rem, 7.5vw, 2.5rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .phase4-copy {
-    font-size: 0.82rem;
-    margin-bottom: 0.85rem;
-  }
-
-  .hero-phase-hud {
-    left: 4vw;
-    bottom: 1.1rem;
-    width: min(275px, 74vw);
-    padding: 0.75rem 0.95rem;
-  }
-
-  .scroll-unwrap-indicator {
-    right: 3vw;
-    bottom: 1.1rem;
   }
 
   .hero-bottom-bar {

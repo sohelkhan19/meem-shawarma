@@ -169,8 +169,7 @@ export function initShawarmaWebGL(canvasContainer, onReady) {
     cameraCtrl.update(sceneBridge.mouseX, sceneBridge.mouseY, reducedMotion);
 
     // Scale Shawarma cleanly with intro & mobile responsiveness
-    const isMob = window.innerWidth < 768;
-    const baseScale = (isMob ? 0.68 : 0.96) * (0.72 + intro * 0.28);
+    const baseScale = (window.innerWidth < 768 ? 0.76 : 0.96) * (0.72 + intro * 0.28);
     const vis = Math.max(sceneBridge.visibilityAlpha, sceneBridge.ctaReturnProgress);
     shawarma.rootRig.scale.setScalar(baseScale * Math.max(vis, 0.001));
     shawarma.rootRig.visible = vis > 0.02;
